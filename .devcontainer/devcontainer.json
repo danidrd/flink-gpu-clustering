@@ -9,8 +9,9 @@
 		"terminal.integrated.defaultProfile.linux": "bash"
 	},
 	"mounts": [
-		"source=${localWorkspaceFolder},target=/workspace,type=bind"
+		"source=${localWorkspaceFolder},target=/workspace,type=volume"
 	],
 	"remoteUser": "root",
-	"postCreateCommand": "apt-get update && apt-get install -y vim && rm -rf /var/lib/apt/lists/*"
+	"postCreateCommand": "apt-get update && apt-get install -y vim && rm -rf /var/lib/apt/lists/*",
+	"shutdownAction": "none"
 }
