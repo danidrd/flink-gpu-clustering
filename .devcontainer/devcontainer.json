@@ -1,0 +1,16 @@
+{
+	"name": "JCuda-Flink:latest",
+	"build": {
+		"dockerfile": "dockerimages/Dockerfile",
+		"context": ".."
+	},
+	"workspaceFolder": "/workspace",
+	"settings":{
+		"terminal.integrated.defaultProfile.linux": "bash"
+	},
+	"mounts": [
+		"source=${localWorkspaceFolder},target=/workspace,type=bind"
+	],
+	"remoteUser": "root",
+	"postCreateCommand": "apt-get update && apt-get install -y vim && rm -rf /var/lib/apt/lists/*"
+}
